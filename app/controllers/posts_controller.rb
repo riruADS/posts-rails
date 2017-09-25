@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     @post.user = current_user
     
     if @post.save
+      ActionCable.server.broadcast 'post_channel', title: @post.title
       redirect_to posts_path
     else
       render 'new'
