@@ -186,6 +186,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt
   coffee-rails
   devise
   factory_girl_rails

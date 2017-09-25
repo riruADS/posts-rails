@@ -18,7 +18,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.5'
 # Authentication
 gem 'devise'
-
+gem 'bcrypt'
 
 group :development, :test do
   gem 'listen'
