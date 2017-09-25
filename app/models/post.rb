@@ -7,5 +7,4 @@ class Post < ApplicationRecord
   
   # Fields validations
   validates :title, presence: true
-  validates :is_private, presence: true
 end
