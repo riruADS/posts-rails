@@ -10,12 +10,18 @@
 
   <body>
     <div class="nav-bar">
-      <% unless current_user.nil? %>
-        <ul>
+      <ul>
+        <% if user_signed_in? %>
           <li><%= current_user.email %></li>
+          <li><%= link_to 'Post', posts_path %></li>
+          <li><%= link_to 'User info', users_show_path %></li>
           <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
-        </ul>
-      <% end %>
+        <% else %>
+          <li>
+            <%= link_to('Login', new_user_session_path)  %>
+          </li>
+        <% end %>
+      </ul>
     </div>
     <%= yield %>
   </body>
