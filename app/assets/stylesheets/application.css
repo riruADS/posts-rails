@@ -68,3 +68,21 @@ ul.nav-bar-el > li > a {
 ul.nav-bar-el > li > a:hover {
   color: #1495cc;
 }
+
+div.flash {
+  font-family: 'Arial Black';
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 2px;
+  text-align: center;
+  color: #fff
+}
+
+div.notice {
+  background: #aee8be;
+}
+
+div.error {
+  background: #e8e6ae;
+}
