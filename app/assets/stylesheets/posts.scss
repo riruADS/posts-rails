@@ -50,3 +50,24 @@ ul#post li {
   border-radius: 10px;
   border-color: #aed6e8;
 }
+
+div.post-form {
+  margin: 0 30%;
+  padding: 60px 0px;
+  width: 50%;
+  text-align: left;
+}
+
+.text-left {
+  margin-left: 0px;
+  text-align: left;
+}
+
+input.post-text-field {
+  width: 600px;
+  height: 64px;
+  border-radius: 2px;
+  border: 1px solid;
+  border-color: #efb8c1;
+  color: #efb8c1;
+}

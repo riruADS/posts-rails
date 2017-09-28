@@ -1,4 +1,4 @@
-div.container-sign-in {
+div.container-center {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -40,7 +40,8 @@ div.form h2 {
   height: 32px;
   border-radius: 2px;
   border: 0px;
-  color: #e8687d
+  color: #fff;
+  background: #1495cc;
 }
 
 .text-field {

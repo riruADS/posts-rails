@@ -5,10 +5,10 @@ class FriendshipsController < ApplicationController
     @friendship = current_user.friendships.build(friend_id: params[:friend_id])
     if @friendship.save
       flash[:notice] = 'Friend requested.'
-      redirect_back(fallback_location: root_path)
+      redirect_back(fallback_location: users_show_path)
     else
       flash[:error] = 'Unable to request friendship.'
-      redirect_back(fallback_location: root_path)
+      redirect_back(fallback_location: users_show_path)
     end
   end
   

@@ -1,14 +1,24 @@
-<h1>Posts#new</h1>
+<div class="container-center">
+  <div class="post-form">
+    <h3 class="text-left">Create new post</h1>
 
-<%= form_for @post do |f| %>
-  <% if @post.errors.any? %>
-  <% end %>
-  
-  <%= f.label :title%>
-  <%= f.text_field :title%>
-  
-  <%= f.label :is_private%>
-  <%= f.check_box :is_private%>
-  
-  <%= f.submit "Post" %>
-<% end %>
+    <%= form_for @post do |f| %>
+      <% if @post.errors.any? %>
+      <% end %>
+      
+      <div class="field">
+        <%= f.label :title, class: "text" %>
+        <%= f.text_field :title, class: "post-text-field"%>
+      </div>
+      
+      <div class="field">
+        <%= f.label :is_private, class: "text" %>
+        <%= f.check_box :is_private%>
+      </div>
+      
+      <div class="action">
+        <%= f.submit "Post", class: "button" %>
+      </div>
+    <% end %>
+   </div>
+ </div>
