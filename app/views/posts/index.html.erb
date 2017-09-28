@@ -1,7 +1,8 @@
 <div class="main-container">
-  
-  <ul id="post">
+  <div class="new-post">
     <%= link_to 'New Post', new_post_path %>
+  </div>
+  <ul id="post">
     <% @posts.each do |post| %>
         <li><%= post.title %></li>
     <% end %>

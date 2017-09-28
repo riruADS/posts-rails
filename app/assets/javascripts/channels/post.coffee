@@ -8,4 +8,5 @@ App.post = App.cable.subscriptions.create "PostChannel",
   received: (data) ->
     console.log data
     unless data.blank?
-      $('ul#post').append '<li>' + data.title
+      console.log "Its works"
+      $('ul#post').prepend '<li>' + data.title

@@ -12,6 +12,10 @@ class User < ApplicationRecord
   has_many :pending_friends, -> { where(friendships: { accepted: false}) }, through: :friendships, source: :friend
   has_many :requested_friendships, -> { where(friendships: { accepted: false}) }, through: :received_friendships, source: :user
   
+  # Fields validations
+  validates_format_of :email, with: Devise::email_regexp
+  validates :password, presence: true
+  
   def friends
     active_friends | received_friends
   end

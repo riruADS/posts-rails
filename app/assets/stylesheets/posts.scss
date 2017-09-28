@@ -25,7 +25,7 @@ ul#post {
   padding: 0px 120px;
 }
 
-ul#post a {
+div.new-post a {
   font-family: 'Arial Black';
   font-size: 22px;
   height: 40px;
@@ -33,9 +33,10 @@ ul#post a {
   color: #efb8c1;
   margin: 0;
   text-decoration: none;
+  padding: 0px 120px;
 }
 
-ul#post a:hover {
+div.new-post a:hover {
   color: #1495cc;
 }
 
