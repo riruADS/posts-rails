@@ -1,3 +1,45 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.main-container {
+  position: relative;
+  margin: 2% 12%;
+  background-color: #fff;
+  height: 100vh;
+}
+
+h3 {
+  font-family: 'Arial Black';
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #e8687d;
+  margin: 0;
+  margin-left: 10%;
+}
+
+table {
+  padding: 0% 12%;
+  width: 100%;
+}
+
+td {
+  font-family: 'Arial Black';
+  font-size: 16px;
+  color: #aed6e8
+}
+
+a {
+  color: #efb8c1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1495cc;
+}
+
+.el-right {
+  width: 100%;
+  text-align: right;
+}

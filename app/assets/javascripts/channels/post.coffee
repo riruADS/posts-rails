@@ -6,5 +6,6 @@ App.post = App.cable.subscriptions.create "PostChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
+    console.log data
     unless data.blank?
       $('ul#post').append '<li>' + data.title

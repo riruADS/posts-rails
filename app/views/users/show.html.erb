@@ -1,51 +1,43 @@
-<h1>Users is <%= current_user.email %></h1>
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<% elsif flash[:error]%>
-  <div class="error"><%= flash[:error] %></div>
-<% end %>
-
-<table id="requests">
-  <h3>Requests</h3>
-  <tr>
-    <td>User name</td>
-    <td>| Actions</td>
-  </tr>
-  <% current_user.requested_friendships.each do |request| %>
-    <tr>
-      <td><%= request.email %></td>
-      <td>
-        <%= link_to "Accept",  friendship_path(id: request.id), method: "put" %>
-        <%= link_to "Decline", friendship_path(id: request.id), method: :delete %>
+<div class="flash">
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% elsif flash[:error]%>
+    <div class="error"><%= flash[:error] %></div>
+  <% end %>
+</div>
+<div class="main-container">
+  <% if current_user.requested_friendships.count > 0 %>
+    <table id="requests">
+      <h3>Requests</h3>
+      <% current_user.requested_friendships.each do |request| %>
+        <tr>
+          <td><%= request.email %></td>
+          <td class="el-right">
+            <%= link_to "Accept",  friendship_path(id: request.id), method: "put" %>
+            <%= link_to "Decline", friendship_path(id: request.id), method: :delete %>
+          </td>
+        </tr>
+      <% end %>
       </td>
+    </table>
+  <% end %>
+
+  <table id="not-friends">
+    <h3>Users you can know</h3>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td class="el-right"><%= link_to "Add Friend", friendships_path(friend_id: user), method: :post %></td>
     </tr>
-  <% end %>
-  </td>
-</table>
+    <% end %>
+  </table>
 
-<table id="not-friends">
-  <h3>Users you can know</h3>
-  <tr>
-    <td>User name</td>
-    <td>| Actions</td>
-  </tr>
-  <% @users.each do |user| %>
-  <tr>
-    <td><%= user.email %></td>
-    <td><%= link_to "Add Friend", friendships_path(friend_id: user), method: :post %></td>
-  </tr>
-  <% end %>
-</table>
-
-<table id="friends">
-  <h3>Friends</h3>
-  <tr>
-    <td>User name</td>
-    <td>| Actions</td>
-  </tr>
-  <% @user_friends.each do |friend| %>
-  <tr>
-    <td><%= friend.email %></td>
-  </tr>
-  <% end %>
-</table>
+  <table id="friends">
+    <h3>Friends</h3>
+    <% @user_friends.each do |friend| %>
+    <tr>
+      <td><%= friend.email %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>

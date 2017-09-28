@@ -1,3 +1,52 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.main-container {
+  position: relative;
+  margin: 2% 12%;
+  background-color: #fff;
+  height: 100vh;
+}
+
+h3 {
+  font-family: 'Arial Black';
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #e8687d;
+  margin: 0;
+  margin-left: 10%;
+}
+
+ul#post {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 120px;
+}
+
+ul#post a {
+  font-family: 'Arial Black';
+  font-size: 22px;
+  height: 40px;
+  line-height: 40px;
+  color: #efb8c1;
+  margin: 0;
+  text-decoration: none;
+}
+
+ul#post a:hover {
+  color: #1495cc;
+}
+
+ul#post li {
+  font-family: 'Arial Black';
+  font-size: 14px;
+  font-weight: lighter;
+  color: #aed6e8;
+  margin: 10px 0px;
+  padding: 40px;
+  border: 1px solid ;
+  border-radius: 10px;
+  border-color: #aed6e8;
+}

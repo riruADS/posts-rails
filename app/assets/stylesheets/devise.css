@@ -1,0 +1,53 @@
+div.container-sign-in {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  
+}
+
+div.form {
+  margin: auto;
+  padding: 200px 0px;
+  width: 50%;
+  text-align: center;
+}
+
+div.form h2 {
+  font-family: 'Arial Black';
+  font-size: 20px;
+  padding: 10px 0px;
+  margin: 0;
+  color: #e8687d;
+}
+
+.text {
+  font-family: 'Arial Black';
+  font-size: 16px;
+  color: #aed6e8
+}
+
+.field {
+  margin: 10px 0px;
+}
+
+.actions {
+  margin: 10px 10px;
+}
+
+.button {
+  width: 150px;
+  height: 32px;
+  border-radius: 2px;
+  border: 0px;
+  color: #e8687d
+}
+
+.text-field {
+  width: 150px;
+  height: 24px;
+  border-radius: 2px;
+  border: 1px solid;
+  border-color: #efb8c1;
+  color: #efb8c1;
+}

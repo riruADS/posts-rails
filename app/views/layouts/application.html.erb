@@ -10,15 +10,16 @@
 
   <body>
     <div class="nav-bar">
-      <ul>
+      <ul class="nav-bar-el">
         <% if user_signed_in? %>
-          <li><%= current_user.email %></li>
-          <li><%= link_to 'Post', posts_path %></li>
-          <li><%= link_to 'User info', users_show_path %></li>
-          <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+          <li class="user-name"><%= current_user.email %></li>
+          <li class="link-contaner"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+          <li class="link-contaner"><%= link_to 'Post', posts_path %></li>
+          <li class="link-contaner"><%= link_to 'User info', users_show_path %></li>
         <% else %>
-          <li>
+          <li class="link-contaner">
             <%= link_to('Login', new_user_session_path)  %>
+            <li class="link-contaner"><%= link_to 'Post', posts_path %></li>
           </li>
         <% end %>
       </ul>
