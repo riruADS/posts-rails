@@ -1,4 +1,4 @@
-App.post = App.cable.subscriptions.create "PostChannel",
+App.privat_post = App.cable.subscriptions.create "PrivatPostChannel",
   connected: ->
     # Called when the subscription is ready for use on the server
 
