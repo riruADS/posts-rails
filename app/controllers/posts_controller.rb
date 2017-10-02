@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   
   def index
     posts_id = []
-    
     Post.all.each do |post|
       if post.is_private && (post.user.friends.include?(current_user) || post.user == current_user)
         posts_id << post.id
