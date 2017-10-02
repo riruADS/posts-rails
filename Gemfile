@@ -20,6 +20,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.5'
 # Authentication
 gem 'devise'
+# Pagination
+gem 'will_paginate'
 
 group :development, :test do
   gem 'listen'

@@ -13,7 +13,7 @@ class PostsController < ApplicationController
       end
     end
     
-    @posts = Post.where(id: posts_id.flatten).order(created_at: :desc)
+    @posts = Post.where(id: posts_id.flatten).paginate(page: params[:page], per_page: 5).order(created_at: :desc)
   end
 
   def new
